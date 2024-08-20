@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/package",
   "name": "keywind",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "private": true,
   "description": "Keywind is a component-based Keycloak Login Theme built with Tailwind CSS.",
   "keywords": [
@@ -72,7 +72,7 @@
     "lint-staged": "15.2.2",
     "npm-run-all2": "6.1.2",
     "postcss": "8.4.38",
-    "prettier": "^3.0.0",
+    "prettier": "^3.3.3",
     "secretlint": "8.2.0",
     "sort-package-json": "2.10.0",
     "tailwindcss": "3.4.3",

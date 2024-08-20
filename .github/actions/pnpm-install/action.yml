@@ -1,13 +1,13 @@
 ---
 name: ⚙️ Monorepo install (pnpm)
-description: 'Run pnpm install'
+description: "Run pnpm install"
 
 runs:
-  using: 'composite'
+  using: "composite"
 
   steps:
     - name: ⚙️ Install pnpm
-      uses: pnpm/action-setup@v2
+      uses: pnpm/action-setup@v4
       id: pnpm-install
       with:
         run_install: false
@@ -37,4 +37,4 @@ runs:
       shell: bash
       run: pnpm install --frozen-lockfile --strict-peer-dependencies --prefer-offline
       env:
-        HUSKY: '0'
+        HUSKY: "0"

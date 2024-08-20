@@ -7,7 +7,10 @@ module.exports = {
   experimental: {
     optimizeUniversalDefaults: true,
   },
-  plugins: [require('@tailwindcss/forms'),require('tailwind-dracula')()],
+  plugins: [
+    require('@tailwindcss/forms'),
+    require('tailwind-dracula')()
+  ],
   theme: {
     extend: {
       colors: {

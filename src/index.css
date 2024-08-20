@@ -30,4 +30,17 @@
   .separate:not(:empty)::before {
     @apply mr-2;
   }
+
+  .bg-dracula-image {
+    --tw-bg-opacity: 0;
+    --bg-color: rgb(31 41 55 / var(--tw-bg-opacity));
+    --bg-image: url('https://raw.githubusercontent.com/dracula/homepage-app/main/backgrounds/Kraken.png');
+    background-image: linear-gradient(var(--bg-color), var(--bg-color)), var(--bg-image);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .bg-dark {
+    --tw-bg-opacity: 0.5 !important;
+  }
 }

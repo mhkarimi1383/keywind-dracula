@@ -1,9 +1,7 @@
 ---
-version: '3.9'
-
 services:
   keycloak-database:
-    image: postgres:15-alpine
+    image: hub.hamdocker.ir/postgres:16
     container_name: keywind_keycloak_db
     restart: on-failure
     volumes:
@@ -16,14 +14,14 @@ services:
       - '5432'
 
   keycloak:
-    image: quay.io/keycloak/keycloak:21.0.2
+    image: quay.hamdocker.ir/keycloak/keycloak:21.0.2
     container_name: keywind_keycloak
     restart: on-failure
     volumes:
       - ./out/keywind.jar:/opt/keycloak/providers/keywind.jar
-      - ./docker/keycloak/certs/cert.pem:/opt/keycloak/conf/cert.pem
-      - ./docker/keycloak/certs/key.pem:/opt/keycloak/conf/key.pem
-      - ./docker/keycloak/setup:/tmp/setup:ro
+      # - ./docker/keycloak/certs/cert.pem:/opt/keycloak/conf/cert.pem
+      # - ./docker/keycloak/certs/key.pem:/opt/keycloak/conf/key.pem
+      # - ./docker/keycloak/setup:/tmp/setup:ro
     networks:
       default:
         aliases:
@@ -41,7 +39,6 @@ services:
     entrypoint: ['/opt/keycloak/bin/kc.sh', 'start-dev']
 
 volumes:
-  rabbitmq_data:
   keycloak_data:
 
 networks:

@@ -1,5 +1,4 @@
-const colors = require('tailwindcss/colors');
-
+const dracula = require('tailwind-dracula/colors')
 /**
  * @type { import('tailwindcss').Config }
  */
@@ -8,12 +7,12 @@ module.exports = {
   experimental: {
     optimizeUniversalDefaults: true,
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'),require('tailwind-dracula')()],
   theme: {
     extend: {
       colors: {
-        primary: colors.blue,
-        secondary: colors.gray,
+        primary: dracula.dracula,
+        secondary: dracula.dark,
 
         provider: {
           bitbucket: '#0052CC',
